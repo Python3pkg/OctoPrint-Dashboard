@@ -31,12 +31,12 @@ def config():
     Command for configuring application
     'flask config'
     """
-    secret = input('Password for token encryption: ')
-    client_refresh = input('Client printer status refresh time: ')
-    server_refresh = input('Server printer status refresh time: ')
-    oauth_client_id = input('Client ID for OAuth: ')
-    oauth_client_secret = input('Client secret for OAuth: ')
-    oauth_redirect_uri = input('Redirect URI for OAuth: ')
+    secret = eval(input('Password for token encryption: '))
+    client_refresh = eval(input('Client printer status refresh time: '))
+    server_refresh = eval(input('Server printer status refresh time: '))
+    oauth_client_id = eval(input('Client ID for OAuth: '))
+    oauth_client_secret = eval(input('Client secret for OAuth: '))
+    oauth_redirect_uri = eval(input('Redirect URI for OAuth: '))
     config = Config.query.scalar()
     if config is None:
         config = Config(None, None, None, None, None, None)
